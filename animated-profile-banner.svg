@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">عبدو — مطوّر Android وويب مفتوح المصدر</title>
+  <desc id="desc">بانر داكن متحرك بألوان زمردية، مع بطاقة كود ووميض مؤشر كتابة.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset=".52" stop-color="#0b1827"/>
+      <stop offset="1" stop-color="#102d33"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#25e0b2" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#25e0b2" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#8df5d5" stop-opacity="0"/>
+      <animate attributeName="x1" values="-1;1;-1" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2;0" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#12d6a0" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#12d6a0" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#8debd2" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#background)"/>
+  <rect width="1200" height="360" rx="28" fill="url(#grid)"/>
+  <ellipse cx="160" cy="70" rx="360" ry="250" fill="url(#glow)">
+    <animate attributeName="cx" values="160;270;160" dur="11s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".55;.95;.55" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <path d="M0 310 C240 250 410 370 650 296 S970 245 1200 300" fill="none" stroke="url(#beam)" stroke-width="2" opacity=".7"/>
+  <g fill="#a9ffe8" opacity=".65">
+    <circle cx="76" cy="80" r="2"><animate attributeName="cy" values="80;68;80" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="560" cy="76" r="1.5"><animate attributeName="opacity" values=".2;1;.2" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="626" cy="280" r="2"><animate attributeName="cy" values="280;266;280" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="1140" cy="66" r="2"><animate attributeName="opacity" values=".15;.9;.15" dur="4.4s" repeatCount="indefinite"/></circle>
+  </g>
+  <g transform="translate(58 69)">
+    <rect x="0" y="0" width="5" height="222" rx="3" fill="#36e3b3" filter="url(#softGlow)"/>
+    <text x="26" y="17" fill="#7df5d3" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">ABDO <tspan fill="#597889">//</tspan> OPEN SOURCE</text>
+    <text x="26" y="91" fill="#f2fbff" font-family="Arial,sans-serif" font-size="57" font-weight="700">عبدو</text>
+    <text x="26" y="137" fill="#c6d8e2" font-family="Arial,sans-serif" font-size="25">مطوّر Android وواجهات ويب عربية</text>
+    <text x="26" y="179" fill="#87a5b2" font-family="Arial,sans-serif" font-size="18">أبني أدوات مفتوحة المصدر — بخصوصية أولًا</text>
+    <g transform="translate(26 205)" font-family="Arial,sans-serif" font-size="13" font-weight="600">
+      <rect width="104" height="28" rx="14" fill="#123d39" stroke="#1e806c"/>
+      <text x="52" y="19" text-anchor="middle" fill="#9cf4d9">ANDROID</text>
+      <rect x="114" width="70" height="28" rx="14" fill="#122d3d" stroke="#286079"/>
+      <text x="149" y="19" text-anchor="middle" fill="#a9dcf2">PWA</text>
+      <rect x="194" width="118" height="28" rx="14" fill="#242942" stroke="#545c89"/>
+      <text x="253" y="19" text-anchor="middle" fill="#c3caff">ALMOSALY</text>
+    </g>
+  </g>
+  <g transform="translate(700 67)">
+    <rect width="438" height="226" rx="17" fill="#08121b" fill-opacity=".92" stroke="#28544f" stroke-width="1.5"/>
+    <path d="M0 47H438" stroke="#24403f"/>
+    <circle cx="23" cy="24" r="5" fill="#ff6b78"/>
+    <circle cx="42" cy="24" r="5" fill="#ffc76b"/>
+    <circle cx="61" cy="24" r="5" fill="#4ce0a7"/>
+    <text x="219" y="29" text-anchor="middle" fill="#77929c" font-family="Arial,sans-serif" font-size="12">profile.ts</text>
+    <g font-family="monospace" font-size="15">
+      <text x="25" y="83" fill="#788d9a">01</text><text x="60" y="83" fill="#d5e6ed"><tspan fill="#d28cff">const</tspan> profile = {</text>
+      <text x="25" y="113" fill="#788d9a">02</text><text x="60" y="113" fill="#c8dbe4">  name: <tspan fill="#a5e89a">"Abdo"</tspan>,</text>
+      <text x="25" y="143" fill="#788d9a">03</text><text x="60" y="143" fill="#c8dbe4">  builds: <tspan fill="#a5e89a">"AlMosaly"</tspan>,</text>
+      <text x="25" y="173" fill="#788d9a">04</text><text x="60" y="173" fill="#c8dbe4">  focus: [<tspan fill="#a5e89a">"Android"</tspan>, <tspan fill="#a5e89a">"Web"</tspan>]</text>
+      <text x="25" y="203" fill="#788d9a">05</text><text x="60" y="203" fill="#d5e6ed">}; <tspan fill="#6f909c">// privacy first</tspan></text>
+    </g>
+    <rect x="361" y="185" width="2" height="22" rx="1" fill="#58f0c2" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+    <path d="M18 226H420" stroke="#36e3b3" stroke-opacity=".65" stroke-width="2" stroke-dasharray="50 420">
+      <animate attributeName="stroke-dashoffset" values="470;0" dur="5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
