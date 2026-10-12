@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">Abdo — Open Source Android and Islamic PWA</title>
+  <desc id="desc">A dark teal gradient banner with Arabic and English project branding.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061b2a"/>
+      <stop offset="0.55" stop-color="#075a52"/>
+      <stop offset="1" stop-color="#0b7d68"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="10%" r="75%">
+      <stop offset="0" stop-color="#9be7c5" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#9be7c5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="stars" width="54" height="54" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="11" r="1.2" fill="#d8fff1" opacity=".45"/>
+      <circle cx="38" cy="35" r=".9" fill="#d8fff1" opacity=".28"/>
+      <path d="M25 5v8M21 9h8" stroke="#d8fff1" stroke-width=".8" opacity=".24"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="300" rx="26" fill="url(#bg)"/>
+  <rect width="1200" height="300" rx="26" fill="url(#glow)"/>
+  <rect width="1200" height="300" rx="26" fill="url(#stars)"/>
+  <circle cx="1010" cy="78" r="56" fill="none" stroke="#d8fff1" stroke-opacity=".28" stroke-width="2"/>
+  <circle cx="1010" cy="78" r="42" fill="none" stroke="#d8fff1" stroke-opacity=".18"/>
+  <path d="M1004 33a46 46 0 1 0 34 78 40 40 0 1 1-34-78Z" fill="#d8fff1" opacity=".92"/>
+  <path d="M1009 139 1019 163 1045 165 1025 182 1032 208 1009 194 986 208 993 182 973 165 999 163Z" fill="#ffb454" opacity=".95"/>
+  <g fill="none" stroke="#9be7c5" stroke-width="2" opacity=".6">
+    <path d="M104 244h320"/><path d="M104 244v-18M168 244v-9M232 244v-18M296 244v-9M360 244v-18M424 244v-9"/>
+  </g>
+  <text x="104" y="93" fill="#d8fff1" font-family="Arial, sans-serif" font-size="24" letter-spacing="4">ABDO • OPEN SOURCE</text>
+  <text x="104" y="154" fill="#ffffff" font-family="Arial, sans-serif" font-size="52" font-weight="700">Android · Web · Privacy</text>
+  <text x="104" y="202" fill="#b8f4da" font-family="Arial, sans-serif" font-size="27">تطبيقات إسلامية مفتوحة المصدر</text>
+  <text x="104" y="275" fill="#d8fff1" font-family="Arial, sans-serif" font-size="18" opacity=".8">AlMosaly · Prayer Times · Quran · Azkar · Qibla</text>
+</svg>
