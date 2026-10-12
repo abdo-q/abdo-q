@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
-  <title id="title">Abdo — Open Source Android and Islamic PWA (Shiny 3D)</title>
-  <desc id="desc">A black and silver 3D metallic banner with keyboard shortcuts, Arabic branding, and active metallic glare animations.</desc>
+  <title id="title">Abdo — Open Source Android and Islamic PWA (Animated Glint)</title>
+  <desc id="desc">A black and silver 3D metallic banner with keyboard shortcuts, Arabic branding, and an active, moving metallic glint animation across the text.</desc>
   <defs>
     <!-- الأسود المعدني الفاخر للخلفية -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -22,11 +22,12 @@
     <linearGradient id="shiny_glint" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#4b5563" stop-opacity="0"/>
       <stop offset="10%" stop-color="#d1d5db" stop-opacity="0.2"/>
-      <stop offset="20%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="20%" stop-color="#ffffff" stop-opacity="0.9"/>
       <stop offset="30%" stop-color="#d1d5db" stop-opacity="0.2"/>
       <stop offset="100%" stop-color="#4b5563" stop-opacity="0"/>
       
       <!-- حركة الشعاع الضوئي عبر النص -->
+      <!-- ستتحرك نقطة النهاية (x2) من اليسار إلى اليمين عبر النص -->
       <animate attributeName="x1" from="-50%" to="150%" dur="4s" repeatCount="indefinite" />
       <animate attributeName="x2" from="0%" to="200%" dur="4s" repeatCount="indefinite" />
     </linearGradient>
@@ -37,13 +38,9 @@
       <feDropShadow dx="0" dy="1" stdDeviation="0" flood-color="#ffffff" flood-opacity="0.4"/>
     </filter>
 
-    <!-- توهج فضي ساطع للأزرار والهلال -->
     <filter id="glowSilver" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-      
-      <!-- تحريك نبض التوهج خفيفاً -->
-      <animate attributeName="stdDeviation" values="3;4.5;3" dur="2s" repeatCount="indefinite" />
     </filter>
   </defs>
 
@@ -53,19 +50,14 @@
   <!-- تأثير إضاءة علوية خفيفة -->
   <path d="M 30 2 H 1170 A 28 28 0 0 1 1198 30 V 40 A 1200 100 0 0 0 2 40 V 30 A 28 28 0 0 1 30 2 Z" fill="#ffffff" opacity="0.15"/>
 
-  <!-- الهلال والنجمة بتصميم 3D فضي مع لمعان متحرك -->
+  <!-- الهلال والنجمة بتصميم 3D فضي -->
   <g filter="url(#shadow3D)">
-    <!-- الدوائر الخلفية مع نبض توهج فضي -->
-    <circle cx="1010" cy="78" r="58" fill="none" stroke="url(#silver_base)" stroke-width="3" opacity="0.6" filter="url(#glowSilver)" />
+    <circle cx="1010" cy="78" r="58" fill="none" stroke="url(#silver_base)" stroke-width="3" opacity="0.6"/>
     <circle cx="1010" cy="78" r="44" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
     
-    <!-- الهلال والنجمة مع وميض لمعان تدريجي -->
-    <path id="moon_path" d="M1002 28a48 48 0 1 0 36 82 42 42 0 1 1-36-82Z" fill="url(#silver_base)">
-      <animate attributeName="fill" values="#ffffff;#d1d5db;#ffffff" dur="3s" repeatCount="indefinite" begin="0.5s" />
-    </path>
-    <path id="star_path" d="M1009 135 1020 162 1048 164 1026 182 1033 210 1009 194 985 210 992 182 970 164 998 162Z" fill="#ffffff">
-      <animate attributeName="fill" values="#ffffff;#d1d5db;#ffffff" dur="3s" repeatCount="indefinite" begin="1s" />
-    </path>
+    <!-- الهلال والنجمة -->
+    <path d="M1002 28a48 48 0 1 0 36 82 42 42 0 1 1-36-82Z" fill="url(#silver_base)"/>
+    <path d="M1009 135 1020 162 1048 164 1026 182 1033 210 1009 194 985 210 992 182 970 164 998 162Z" fill="#ffffff"/>
   </g>
 
   <!-- النصوص الرئيسية 3D مع لمعان متحرك -->
