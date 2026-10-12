@@ -1,34 +1,108 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
-  <title id="title">Abdo — Open Source Android and Islamic PWA</title>
-  <desc id="desc">A dark teal gradient banner with Arabic and English project branding.</desc>
+  <title id="title">Abdo — Open Source Android and Islamic PWA (Shiny 3D)</title>
+  <desc id="desc">A black and silver 3D metallic banner with keyboard shortcuts, Arabic branding, and active metallic glare animations.</desc>
   <defs>
+    <!-- الأسود المعدني الفاخر للخلفية -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#061b2a"/>
-      <stop offset="0.55" stop-color="#075a52"/>
-      <stop offset="1" stop-color="#0b7d68"/>
+      <stop offset="0" stop-color="#141414"/>
+      <stop offset="0.5" stop-color="#0a0a0a"/>
+      <stop offset="1" stop-color="#000000"/>
     </linearGradient>
-    <radialGradient id="glow" cx="80%" cy="10%" r="75%">
-      <stop offset="0" stop-color="#9be7c5" stop-opacity=".35"/>
-      <stop offset="1" stop-color="#9be7c5" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="stars" width="54" height="54" patternUnits="userSpaceOnUse">
-      <circle cx="8" cy="11" r="1.2" fill="#d8fff1" opacity=".45"/>
-      <circle cx="38" cy="35" r=".9" fill="#d8fff1" opacity=".28"/>
-      <path d="M25 5v8M21 9h8" stroke="#d8fff1" stroke-width=".8" opacity=".24"/>
-    </pattern>
+
+    <!-- لمعان فضي متطور (الأساس) -->
+    <linearGradient id="silver_base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.3" stop-color="#d1d5db"/>
+      <stop offset="0.5" stop-color="#9ca3af"/>
+      <stop offset="0.7" stop-color="#e5e7eb"/>
+      <stop offset="1" stop-color="#4b5563"/>
+    </linearGradient>
+
+    <!-- تأثير اللمعان المتحرك (Glint Animation) للنص -->
+    <linearGradient id="shiny_glint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4b5563" stop-opacity="0"/>
+      <stop offset="10%" stop-color="#d1d5db" stop-opacity="0.2"/>
+      <stop offset="20%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="30%" stop-color="#d1d5db" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#4b5563" stop-opacity="0"/>
+      
+      <!-- حركة الشعاع الضوئي عبر النص -->
+      <animate attributeName="x1" from="-50%" to="150%" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="x2" from="0%" to="200%" dur="4s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <!-- تأثير ثلاثي الأبعاد للنصوص (ظل وقناع) -->
+    <filter id="shadow3D" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="2" flood-color="#000000" flood-opacity="0.9"/>
+      <feDropShadow dx="0" dy="1" stdDeviation="0" flood-color="#ffffff" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- توهج فضي ساطع للأزرار والهلال -->
+    <filter id="glowSilver" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+      
+      <!-- تحريك نبض التوهج خفيفاً -->
+      <animate attributeName="stdDeviation" values="3;4.5;3" dur="2s" repeatCount="indefinite" />
+    </filter>
   </defs>
-  <rect width="1200" height="300" rx="26" fill="url(#bg)"/>
-  <rect width="1200" height="300" rx="26" fill="url(#glow)"/>
-  <rect width="1200" height="300" rx="26" fill="url(#stars)"/>
-  <circle cx="1010" cy="78" r="56" fill="none" stroke="#d8fff1" stroke-opacity=".28" stroke-width="2"/>
-  <circle cx="1010" cy="78" r="42" fill="none" stroke="#d8fff1" stroke-opacity=".18"/>
-  <path d="M1004 33a46 46 0 1 0 34 78 40 40 0 1 1-34-78Z" fill="#d8fff1" opacity=".92"/>
-  <path d="M1009 139 1019 163 1045 165 1025 182 1032 208 1009 194 986 208 993 182 973 165 999 163Z" fill="#ffb454" opacity=".95"/>
-  <g fill="none" stroke="#9be7c5" stroke-width="2" opacity=".6">
-    <path d="M104 244h320"/><path d="M104 244v-18M168 244v-9M232 244v-18M296 244v-9M360 244v-18M424 244v-9"/>
+
+  <!-- إطار البانر الخلفي -->
+  <rect width="1200" height="300" rx="30" fill="url(#bg)" stroke="#374151" stroke-width="3"/>
+  
+  <!-- تأثير إضاءة علوية خفيفة -->
+  <path d="M 30 2 H 1170 A 28 28 0 0 1 1198 30 V 40 A 1200 100 0 0 0 2 40 V 30 A 28 28 0 0 1 30 2 Z" fill="#ffffff" opacity="0.15"/>
+
+  <!-- الهلال والنجمة بتصميم 3D فضي مع لمعان متحرك -->
+  <g filter="url(#shadow3D)">
+    <!-- الدوائر الخلفية مع نبض توهج فضي -->
+    <circle cx="1010" cy="78" r="58" fill="none" stroke="url(#silver_base)" stroke-width="3" opacity="0.6" filter="url(#glowSilver)" />
+    <circle cx="1010" cy="78" r="44" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
+    
+    <!-- الهلال والنجمة مع وميض لمعان تدريجي -->
+    <path id="moon_path" d="M1002 28a48 48 0 1 0 36 82 42 42 0 1 1-36-82Z" fill="url(#silver_base)">
+      <animate attributeName="fill" values="#ffffff;#d1d5db;#ffffff" dur="3s" repeatCount="indefinite" begin="0.5s" />
+    </path>
+    <path id="star_path" d="M1009 135 1020 162 1048 164 1026 182 1033 210 1009 194 985 210 992 182 970 164 998 162Z" fill="#ffffff">
+      <animate attributeName="fill" values="#ffffff;#d1d5db;#ffffff" dur="3s" repeatCount="indefinite" begin="1s" />
+    </path>
   </g>
-  <text x="104" y="93" fill="#d8fff1" font-family="Arial, sans-serif" font-size="24" letter-spacing="4">ABDO • OPEN SOURCE</text>
-  <text x="104" y="154" fill="#ffffff" font-family="Arial, sans-serif" font-size="52" font-weight="700">Android · Web · Privacy</text>
-  <text x="104" y="202" fill="#b8f4da" font-family="Arial, sans-serif" font-size="27">تطبيقات إسلامية مفتوحة المصدر</text>
-  <text x="104" y="275" fill="#d8fff1" font-family="Arial, sans-serif" font-size="18" opacity=".8">AlMosaly · Prayer Times · Quran · Azkar · Qibla</text>
+
+  <!-- النصوص الرئيسية 3D مع لمعان متحرك -->
+  <g filter="url(#shadow3D)">
+    <!-- النص العلوي مع لمعان متحرك -->
+    <text x="70" y="75" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="url(#silver_base)" letter-spacing="3">ABDO • OPEN SOURCE</text>
+    <text x="70" y="75" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="url(#shiny_glint)" letter-spacing="3">ABDO • OPEN SOURCE</text>
+    
+    <!-- النص الأوسط مع لمعان متحرك -->
+    <text x="70" y="135" font-family="Arial, sans-serif" font-size="46" font-weight="bold" fill="#ffffff">Android · Web · Privacy</text>
+    <text x="70" y="135" font-family="Arial, sans-serif" font-size="46" font-weight="bold" fill="url(#shiny_glint)">Android · Web · Privacy</text>
+    
+    <!-- النص العربي -->
+    <text x="70" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#e5e7eb">تطبيقات إسلامية مفتوحة المصدر</text>
+  </g>
+
+  <!-- قسم اختصارات لوحة المفاتيح (Shortcuts) -->
+  <g transform="translate(70, 215)">
+    <!-- عنوان الاختصارات -->
+    <text x="0" y="22" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9ca3af" letter-spacing="1">SHORTCUTS</text>
+    
+    <!-- زر اختصار 1 -->
+    <g transform="translate(0, 35)">
+      <rect width="130" height="34" rx="8" fill="#1f2937" stroke="url(#silver_base)" stroke-width="1.5" filter="url(#glowSilver)"/>
+      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">CTRL + K</text>
+    </g>
+
+    <!-- زر اختصار 2 -->
+    <g transform="translate(145, 35)">
+      <rect width="130" height="34" rx="8" fill="#1f2937" stroke="url(#silver_base)" stroke-width="1.5" filter="url(#glowSilver)"/>
+      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">ALT + P</text>
+    </g>
+
+    <!-- زر اختصار 3 -->
+    <g transform="translate(290, 35)">
+      <rect width="150" height="34" rx="8" fill="#1f2937" stroke="url(#silver_base)" stroke-width="1.5" filter="url(#glowSilver)"/>
+      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">CTRL + SHIFT</text>
+    </g>
+  </g>
 </svg>
