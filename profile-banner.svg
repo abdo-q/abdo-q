@@ -82,19 +82,19 @@
     <!-- زر اختصار 1 -->
     <g transform="translate(0, 35)">
       <rect width="130" height="34" rx="8" fill="#1f2937" stroke="url(#silver_base)" stroke-width="1.5" filter="url(#glowSilver)"/>
-      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">CTRL + K</text>
+      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">.............</text>
     </g>
 
     <!-- زر اختصار 2 -->
     <g transform="translate(145, 35)">
       <rect width="130" height="34" rx="8" fill="#1f2937" stroke="url(#silver_base)" stroke-width="1.5" filter="url(#glowSilver)"/>
-      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">ALT + P</text>
+      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">..........</text>
     </g>
 
     <!-- زر اختصار 3 -->
     <g transform="translate(290, 35)">
       <rect width="150" height="34" rx="8" fill="#1f2937" stroke="url(#silver_base)" stroke-width="1.5" filter="url(#glowSilver)"/>
-      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">CTRL + SHIFT</text>
+      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">..........</text>
     </g>
   </g>
 </svg>
