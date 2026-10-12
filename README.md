@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="./profile-banner.svg" alt="Abdo — Android, Web and Privacy open-source projects" width="100%" />
+<img src="./codepen-projects-banner.gif" alt="Rotating previews of the original CodePen projects" width="100%" />
+<p>
+  <a href="https://codepen.io/editor/sabosugi/pen/01a120f3-c9f5-7904-9d75-ee36031762a3">Holographic Glass Cube Grid</a> ·
+  <a href="https://codepen.io/tmpl/pen/YPZQxeN">Realistic Interactive Pool Water</a>
+</p>
 
 # عبدو · Abdo
 
