@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./animated-profile-banner.svg" alt="عبدو — مطوّر Android وويب مفتوح المصدر" width="100%" />
+<img src="./profile-banner.svg" alt="Abdo — Android, Web and Privacy open-source projects" width="100%" />
 
 # عبدو · Abdo
 
