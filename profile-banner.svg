@@ -1,60 +1,100 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
-  <title id="title">Scrollable content component preview</title>
-  <desc id="desc">A visual preview of a polished scroll area component with cards, content rows, and a custom scrollbar.</desc>
+  <title id="title">Abdo — Open Source Android and Islamic PWA (Animated Glint)</title>
+  <desc id="desc">A black and silver 3D metallic banner with keyboard shortcuts, Arabic branding, and an active, moving metallic glint animation across the text.</desc>
   <defs>
+    <!-- الأسود المعدني الفاخر للخلفية -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0f172a"/><stop offset="0.5" stop-color="#111827"/><stop offset="1" stop-color="#020617"/>
+      <stop offset="0" stop-color="#141414"/>
+      <stop offset="0.5" stop-color="#0a0a0a"/>
+      <stop offset="1" stop-color="#000000"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#22d3ee"/><stop offset="0.52" stop-color="#6366f1"/><stop offset="1" stop-color="#c084fc"/>
+
+    <!-- لمعان فضي متطور (الأساس) -->
+    <linearGradient id="silver_base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.3" stop-color="#d1d5db"/>
+      <stop offset="0.5" stop-color="#9ca3af"/>
+      <stop offset="0.7" stop-color="#e5e7eb"/>
+      <stop offset="1" stop-color="#4b5563"/>
     </linearGradient>
-    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#e2e8f0"/>
+
+    <!-- تأثير اللمعان المتحرك (Glint Animation) للنص -->
+    <linearGradient id="shiny_glint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4b5563" stop-opacity="0"/>
+      <stop offset="10%" stop-color="#d1d5db" stop-opacity="0.2"/>
+      <stop offset="20%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#d1d5db" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#4b5563" stop-opacity="0"/>
+      
+      <!-- حركة الشعاع الضوئي عبر النص -->
+      <!-- ستتحرك نقطة النهاية (x2) من اليسار إلى اليمين عبر النص -->
+      <animate attributeName="x1" from="-50%" to="150%" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="x2" from="0%" to="200%" dur="4s" repeatCount="indefinite" />
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".45"/></filter>
-    <clipPath id="viewport"><rect x="106" y="72" width="988" height="184" rx="10"/></clipPath>
+
+    <!-- تأثير ثلاثي الأبعاد للنصوص (ظل وقناع) -->
+    <filter id="shadow3D" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="2" flood-color="#000000" flood-opacity="0.9"/>
+      <feDropShadow dx="0" dy="1" stdDeviation="0" flood-color="#ffffff" flood-opacity="0.4"/>
+    </filter>
+
+    <filter id="glowSilver" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
-  <rect width="1200" height="300" fill="url(#bg)"/>
-  <circle cx="1020" cy="-30" r="220" fill="#6366f1" opacity=".08"/>
-  <circle cx="120" cy="320" r="190" fill="#22d3ee" opacity=".06"/>
-  <rect x="72" y="38" width="1056" height="224" rx="16" fill="#0b1220" stroke="#334155" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="72" y="38" width="1056" height="4" rx="2" fill="url(#accent)"/>
-  <g>
-    <circle cx="99" cy="61" r="6" fill="#fb7185"/><circle cx="119" cy="61" r="6" fill="#fbbf24"/><circle cx="139" cy="61" r="6" fill="#34d399"/>
-    <rect x="170" y="51" width="180" height="20" rx="10" fill="#1e293b"/>
-    <circle cx="186" cy="61" r="4" fill="#22d3ee"/><rect x="198" y="57" width="132" height="7" rx="3.5" fill="#64748b" opacity=".75"/>
+
+  <!-- إطار البانر الخلفي -->
+  <rect width="1200" height="300" rx="30" fill="url(#bg)" stroke="#374151" stroke-width="3"/>
+  
+  <!-- تأثير إضاءة علوية خفيفة -->
+  <path d="M 30 2 H 1170 A 28 28 0 0 1 1198 30 V 40 A 1200 100 0 0 0 2 40 V 30 A 28 28 0 0 1 30 2 Z" fill="#ffffff" opacity="0.15"/>
+
+  <!-- الهلال والنجمة بتصميم 3D فضي -->
+  <g filter="url(#shadow3D)">
+    <circle cx="1010" cy="78" r="58" fill="none" stroke="url(#silver_base)" stroke-width="3" opacity="0.6"/>
+    <circle cx="1010" cy="78" r="44" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
+    
+    <!-- الهلال والنجمة -->
+    <path d="M1002 28a48 48 0 1 0 36 82 42 42 0 1 1-36-82Z" fill="url(#silver_base)"/>
+    <path d="M1009 135 1020 162 1048 164 1026 182 1033 210 1009 194 985 210 992 182 970 164 998 162Z" fill="#ffffff"/>
   </g>
-  <rect x="94" y="72" width="1010" height="184" rx="11" fill="#0f172a" stroke="#1e293b"/>
-  <g clip-path="url(#viewport)">
-    <rect x="106" y="72" width="988" height="184" fill="url(#panel)"/>
-    <rect x="106" y="72" width="988" height="42" fill="#ffffff" opacity=".78"/>
-    <circle cx="130" cy="93" r="10" fill="#6366f1" opacity=".16"/><path d="M126 93h8M130 89v8" stroke="#6366f1" stroke-width="2" stroke-linecap="round"/>
-    <rect x="150" y="87" width="172" height="8" rx="4" fill="#334155"/><rect x="150" y="101" width="94" height="5" rx="2.5" fill="#94a3b8"/>
-    <rect x="358" y="86" width="112" height="20" rx="10" fill="#e0e7ff"/><circle cx="374" cy="96" r="4" fill="#6366f1"/><rect x="384" y="93" width="68" height="6" rx="3" fill="#818cf8" opacity=".8"/>
-    <rect x="492" y="86" width="90" height="20" rx="10" fill="#cffafe"/><circle cx="508" cy="96" r="4" fill="#06b6d4"/><rect x="518" y="93" width="48" height="6" rx="3" fill="#0891b2" opacity=".8"/>
-    <rect x="106" y="114" width="988" height="1" fill="#cbd5e1"/>
-    <g transform="translate(126 128)">
-      <rect width="294" height="84" rx="10" fill="#ffffff" stroke="#dbe3ee"/>
-      <circle cx="25" cy="27" r="12" fill="#dbeafe"/><path d="M20 28l4 4 7-9" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <rect x="48" y="20" width="146" height="8" rx="4" fill="#334155"/><rect x="48" y="36" width="210" height="6" rx="3" fill="#cbd5e1"/><rect x="48" y="50" width="176" height="6" rx="3" fill="#e2e8f0"/>
-      <rect x="20" y="68" width="58" height="5" rx="2.5" fill="#818cf8"/><rect x="88" y="68" width="42" height="5" rx="2.5" fill="#cbd5e1"/>
-    </g>
-    <g transform="translate(438 128)">
-      <rect width="294" height="84" rx="10" fill="#ffffff" stroke="#dbe3ee"/>
-      <circle cx="25" cy="27" r="12" fill="#ccfbf1"/><path d="M19 27h12M25 21v12" stroke="#0f766e" stroke-width="2" stroke-linecap="round"/>
-      <rect x="48" y="20" width="128" height="8" rx="4" fill="#334155"/><rect x="48" y="36" width="210" height="6" rx="3" fill="#cbd5e1"/><rect x="48" y="50" width="150" height="6" rx="3" fill="#e2e8f0"/>
-      <rect x="20" y="68" width="74" height="5" rx="2.5" fill="#22c55e"/><rect x="104" y="68" width="48" height="5" rx="2.5" fill="#cbd5e1"/>
-    </g>
-    <g transform="translate(750 128)">
-      <rect width="294" height="84" rx="10" fill="#ffffff" stroke="#dbe3ee"/>
-      <circle cx="25" cy="27" r="12" fill="#fce7f3"/><path d="M20 27l4 4 7-9" fill="none" stroke="#db2777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <rect x="48" y="20" width="162" height="8" rx="4" fill="#334155"/><rect x="48" y="36" width="210" height="6" rx="3" fill="#cbd5e1"/><rect x="48" y="50" width="186" height="6" rx="3" fill="#e2e8f0"/>
-      <rect x="20" y="68" width="62" height="5" rx="2.5" fill="#ec4899"/><rect x="92" y="68" width="45" height="5" rx="2.5" fill="#cbd5e1"/>
-    </g>
-    <rect x="126" y="226" width="890" height="12" rx="6" fill="#ffffff" opacity=".82"/>
-    <rect x="126" y="229" width="560" height="6" rx="3" fill="#cbd5e1" opacity=".9"/>
+
+  <!-- النصوص الرئيسية 3D مع لمعان متحرك -->
+  <g filter="url(#shadow3D)">
+    <!-- النص العلوي مع لمعان متحرك -->
+    <text x="70" y="75" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="url(#silver_base)" letter-spacing="3">ABDO • OPEN SOURCE</text>
+    <text x="70" y="75" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="url(#shiny_glint)" letter-spacing="3">ABDO • OPEN SOURCE</text>
+    
+    <!-- النص الأوسط مع لمعان متحرك -->
+    <text x="70" y="135" font-family="Arial, sans-serif" font-size="46" font-weight="bold" fill="#ffffff">Android · Web · Privacy</text>
+    <text x="70" y="135" font-family="Arial, sans-serif" font-size="46" font-weight="bold" fill="url(#shiny_glint)">Android · Web · Privacy</text>
+    
+    <!-- النص العربي -->
+    <text x="70" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#e5e7eb">تطبيقات إسلامية مفتوحة المصدر</text>
   </g>
-  <rect x="1078" y="80" width="7" height="168" rx="3.5" fill="#cbd5e1"/>
-  <rect x="1078" y="121" width="7" height="62" rx="3.5" fill="#64748b"/>
-  <path d="M1081.5 82l-3 4h6zM1081.5 246l-3-4h6z" fill="#94a3b8"/>
+
+  <!-- قسم اختصارات لوحة المفاتيح (Shortcuts) -->
+  <g transform="translate(70, 215)">
+    <!-- عنوان الاختصارات -->
+    <text x="0" y="22" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9ca3af" letter-spacing="1">SHORTCUTS</text>
+    
+    <!-- زر اختصار 1 -->
+    <g transform="translate(0, 35)">
+      <rect width="130" height="34" rx="8" fill="#1f2937" stroke="url(#silver_base)" stroke-width="1.5" filter="url(#glowSilver)"/>
+      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">.............</text>
+    </g>
+
+    <!-- زر اختصار 2 -->
+    <g transform="translate(145, 35)">
+      <rect width="130" height="34" rx="8" fill="#1f2937" stroke="url(#silver_base)" stroke-width="1.5" filter="url(#glowSilver)"/>
+      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">..........</text>
+    </g>
+
+    <!-- زر اختصار 3 -->
+    <g transform="translate(290, 35)">
+      <rect width="150" height="34" rx="8" fill="#1f2937" stroke="url(#silver_base)" stroke-width="1.5" filter="url(#glowSilver)"/>
+      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">..........</text>
+    </g>
+  </g>
 </svg>

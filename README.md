@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./profile-banner.png" alt="Abdo — Android, Web and Privacy open-source projects" width="100%" />
+<img src="./profile-banner.svg" alt="Abdo — Android, Web and Privacy open-source projects" width="100%" />
 
 # عبدو · Abdo
 
