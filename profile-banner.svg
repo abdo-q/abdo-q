@@ -1,100 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
-  <title id="title">Abdo — Open Source Android and Islamic PWA (Animated Glint)</title>
-  <desc id="desc">A black and silver 3D metallic banner with keyboard shortcuts, Arabic branding, and an active, moving metallic glint animation across the text.</desc>
+  <title id="title">React TypeScript source code</title>
+  <desc id="desc">A code-only profile banner showing the supplied React TypeScript source.</desc>
   <defs>
-    <!-- الأسود المعدني الفاخر للخلفية -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#141414"/>
-      <stop offset="0.5" stop-color="#0a0a0a"/>
-      <stop offset="1" stop-color="#000000"/>
+      <stop offset="0" stop-color="#111827"/><stop offset="0.52" stop-color="#0b1220"/><stop offset="1" stop-color="#030712"/>
     </linearGradient>
-
-    <!-- لمعان فضي متطور (الأساس) -->
-    <linearGradient id="silver_base" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="0.3" stop-color="#d1d5db"/>
-      <stop offset="0.5" stop-color="#9ca3af"/>
-      <stop offset="0.7" stop-color="#e5e7eb"/>
-      <stop offset="1" stop-color="#4b5563"/>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset="0.5" stop-color="#818cf8"/><stop offset="1" stop-color="#c084fc"/>
     </linearGradient>
-
-    <!-- تأثير اللمعان المتحرك (Glint Animation) للنص -->
-    <linearGradient id="shiny_glint" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4b5563" stop-opacity="0"/>
-      <stop offset="10%" stop-color="#d1d5db" stop-opacity="0.2"/>
-      <stop offset="20%" stop-color="#ffffff" stop-opacity="0.9"/>
-      <stop offset="30%" stop-color="#d1d5db" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#4b5563" stop-opacity="0"/>
-      
-      <!-- حركة الشعاع الضوئي عبر النص -->
-      <!-- ستتحرك نقطة النهاية (x2) من اليسار إلى اليمين عبر النص -->
-      <animate attributeName="x1" from="-50%" to="150%" dur="4s" repeatCount="indefinite" />
-      <animate attributeName="x2" from="0%" to="200%" dur="4s" repeatCount="indefinite" />
-    </linearGradient>
-
-    <!-- تأثير ثلاثي الأبعاد للنصوص (ظل وقناع) -->
-    <filter id="shadow3D" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="2" flood-color="#000000" flood-opacity="0.9"/>
-      <feDropShadow dx="0" dy="1" stdDeviation="0" flood-color="#ffffff" flood-opacity="0.4"/>
-    </filter>
-
-    <filter id="glowSilver" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#000" flood-opacity=".55"/></filter>
+    <clipPath id="clip"><rect x="28" y="24" width="1144" height="252" rx="14"/></clipPath>
   </defs>
-
-  <!-- إطار البانر الخلفي -->
-  <rect width="1200" height="300" rx="30" fill="url(#bg)" stroke="#374151" stroke-width="3"/>
-  
-  <!-- تأثير إضاءة علوية خفيفة -->
-  <path d="M 30 2 H 1170 A 28 28 0 0 1 1198 30 V 40 A 1200 100 0 0 0 2 40 V 30 A 28 28 0 0 1 30 2 Z" fill="#ffffff" opacity="0.15"/>
-
-  <!-- الهلال والنجمة بتصميم 3D فضي -->
-  <g filter="url(#shadow3D)">
-    <circle cx="1010" cy="78" r="58" fill="none" stroke="url(#silver_base)" stroke-width="3" opacity="0.6"/>
-    <circle cx="1010" cy="78" r="44" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
-    
-    <!-- الهلال والنجمة -->
-    <path d="M1002 28a48 48 0 1 0 36 82 42 42 0 1 1-36-82Z" fill="url(#silver_base)"/>
-    <path d="M1009 135 1020 162 1048 164 1026 182 1033 210 1009 194 985 210 992 182 970 164 998 162Z" fill="#ffffff"/>
-  </g>
-
-  <!-- النصوص الرئيسية 3D مع لمعان متحرك -->
-  <g filter="url(#shadow3D)">
-    <!-- النص العلوي مع لمعان متحرك -->
-    <text x="70" y="75" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="url(#silver_base)" letter-spacing="3">ABDO • OPEN SOURCE</text>
-    <text x="70" y="75" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="url(#shiny_glint)" letter-spacing="3">ABDO • OPEN SOURCE</text>
-    
-    <!-- النص الأوسط مع لمعان متحرك -->
-    <text x="70" y="135" font-family="Arial, sans-serif" font-size="46" font-weight="bold" fill="#ffffff">Android · Web · Privacy</text>
-    <text x="70" y="135" font-family="Arial, sans-serif" font-size="46" font-weight="bold" fill="url(#shiny_glint)">Android · Web · Privacy</text>
-    
-    <!-- النص العربي -->
-    <text x="70" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#e5e7eb">تطبيقات إسلامية مفتوحة المصدر</text>
-  </g>
-
-  <!-- قسم اختصارات لوحة المفاتيح (Shortcuts) -->
-  <g transform="translate(70, 215)">
-    <!-- عنوان الاختصارات -->
-    <text x="0" y="22" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9ca3af" letter-spacing="1">SHORTCUTS</text>
-    
-    <!-- زر اختصار 1 -->
-    <g transform="translate(0, 35)">
-      <rect width="130" height="34" rx="8" fill="#1f2937" stroke="url(#silver_base)" stroke-width="1.5" filter="url(#glowSilver)"/>
-      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">.............</text>
-    </g>
-
-    <!-- زر اختصار 2 -->
-    <g transform="translate(145, 35)">
-      <rect width="130" height="34" rx="8" fill="#1f2937" stroke="url(#silver_base)" stroke-width="1.5" filter="url(#glowSilver)"/>
-      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">..........</text>
-    </g>
-
-    <!-- زر اختصار 3 -->
-    <g transform="translate(290, 35)">
-      <rect width="150" height="34" rx="8" fill="#1f2937" stroke="url(#silver_base)" stroke-width="1.5" filter="url(#glowSilver)"/>
-      <text x="15" y="22" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">..........</text>
-    </g>
+  <rect width="1200" height="300" fill="#020617"/>
+  <rect x="28" y="24" width="1144" height="252" rx="14" fill="url(#bg)" stroke="#334155" stroke-width="2" filter="url(#shadow)"/>
+  <g clip-path="url(#clip)">
+    <rect x="28" y="24" width="1144" height="34" fill="#172033"/>
+    <circle cx="54" cy="41" r="6" fill="#fb7185"/><circle cx="74" cy="41" r="6" fill="#fbbf24"/><circle cx="94" cy="41" r="6" fill="#34d399"/>
+    <text x="600" y="45" text-anchor="middle" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">pasted_content.txt</text>
+    <rect x="28" y="57" width="1144" height="3" fill="url(#top)" opacity=".9"/>
+    <rect x="28" y="60" width="62" height="216" fill="#0f172a" opacity=".92"/>
+    <text x="94" y="46" class="code"><tspan class="ln">01</tspan><tspan dx="22">"use client";</tspan></text><text x="94" y="60" class="code"><tspan class="ln">02</tspan><tspan dx="22"></tspan></text><text x="94" y="74" class="code"><tspan class="ln">03</tspan><tspan dx="22">import {</tspan></text><text x="94" y="88" class="code"><tspan class="ln">04</tspan><tspan dx="22">  forwardRef,</tspan></text><text x="94" y="102" class="code"><tspan class="ln">05</tspan><tspan dx="22">  useCallback,</tspan></text><text x="94" y="116" class="code"><tspan class="ln">06</tspan><tspan dx="22">  useEffect,</tspan></text><text x="94" y="130" class="code"><tspan class="ln">07</tspan><tspan dx="22">  useMemo,</tspan></text><text x="94" y="144" class="code"><tspan class="ln">08</tspan><tspan dx="22">  useRef,</tspan></text><text x="94" y="158" class="code"><tspan class="ln">09</tspan><tspan dx="22">  useState,</tspan></text><text x="94" y="172" class="code"><tspan class="ln">10</tspan><tspan dx="22">  type ComponentPropsWithoutRef,</tspan></text><text x="94" y="186" class="code"><tspan class="ln">11</tspan><tspan dx="22">} from "react";</tspan></text><text x="94" y="200" class="code"><tspan class="ln">12</tspan><tspan dx="22"></tspan></text><text x="94" y="214" class="code"><tspan class="ln">13</tspan><tspan dx="22">import { cn } from "@/lib/cn";</tspan></text><text x="94" y="228" class="code"><tspan class="ln">14</tspan><tspan dx="22">import { ChevronDown, ChevronUp } from "lucide-react";</tspan></text><text x="94" y="242" class="code"><tspan class="ln">15</tspan><tspan dx="22"></tspan></text><text x="94" y="256" class="code"><tspan class="ln">16</tspan><tspan dx="22">// Tailwind-only scroll area — self-contained, no global CSS.</tspan></text><text x="94" y="270" class="code"><tspan class="ln">17</tspan><tspan dx="22">const HIDE_SCROLLBAR =</tspan></text>
+    <rect x="1154" y="73" width="4" height="184" rx="2" fill="#334155"/>
+    <rect x="1154" y="73" width="4" height="42" rx="2" fill="#64748b"/>
   </g>
 </svg>
